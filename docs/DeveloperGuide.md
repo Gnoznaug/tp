@@ -710,47 +710,65 @@ testers are expected to do more *exploratory* testing.
 ### Meeting
 
 #### Adding Meetings
-1. Test case: `add n/Lecture u/https://www.zoom.com d/25-03-2022 1400 dur/1.5 m/1 r/Y t/recorded t/lecturequiz` <br/>
-   Prerequisites:
-      1. There is no other meetings with the exact same fields.
-      2. There is one module in the module list.<br/>
-   Expected: Meeting is added.
-2. Incorrect commands:
-   1. Duplicate meeting <br/>
-      Prerequisite:
-         1. The testcase command was just entered.<br/>
-      Command: `add n/Lecture u/https://www.zoom.com d/25-03-2022 1400 dur/1.5 m/1 r/Y t/recorded t/lecturequiz`.
-   2. Incorrect name <br/>
-      Command: `add n/Lectur$ u/https://www.zoom.com d/25-03-2022 1400 dur/1.5 m/1 r/Y t/recorded t/lecturequiz`.
-   3. Incorrect url <br/>
-      Command: `add n/Lecture u/zoom d/25-03-2022 1400 dur/1.5 m/1 r/Y t/recorded t/lecturequiz`.
-   4. Incorrect date <br/>
-      Command: `add n/Lecture u/https://www.zoom.com d/40-03-2022 1400 dur/1.5 m/1 r/Y t/recorded t/lecturequiz`.
-   5. Incorrect time <br/>
-      Command: `add n/Lecture u/https://www.zoom.com d/25-03-2022 2500 dur/1.5 m/1 r/Y t/recorded t/lecturequiz`.
-   6. Incorrect duration <br/>
-      Command: `add n/Lecture u/https://www.zoom.com d/25-03-2022 1400 dur/25 m/1 r/Y t/recorded t/lecturequiz`.
-   7. Incorrect module index <br/>
-      Command: `add n/Lecture u/https://www.zoom.com d/25-03-2022 1400 dur/1.5 m/10 r/Y t/recorded t/lecturequiz`.
-   8. Incorrect recurrence <br/>
-      Command: `add n/Lecture u/https://www.zoom.com d/25-03-2022 1400 dur/1.5 m/1 r/A t/recorded t/lecturequiz`.
-   9. Incorrect tag <br/>
-      Command: `add n/Lecture u/https://www.zoom.com d/25-03-2022 1400 dur/1.5 m/1 r/Y t/recorded t/!ecturequiz`.<br/>
-   For each of the incorrect commands, there will be an error message included on how to rectify the issue.
+<ol> 
+    <li> Test case: `add n/Lecture u/https://www.zoom.com d/25-03-2022 1400 dur/1.5 m/1 r/Y t/recorded t/lecturequiz`</li>
+    <p>Prerequisites:</p>
+        <ol>
+            <li>There is no other meetings with the exact same fields.</li>
+            <li>There is one module in the module list.</li>
+        </ol>
+    <p>Expected: Meeting is added.</p>
+    <li>Incorrect commands:</li>
+        <ol>
+            <li>Duplicate meeting</li>
+            <p>Prerequisite:</p>
+                <ol>
+                    <li>The testcase command was just entered.</li>
+                </ol>
+            <p>Command: `add n/Lecture u/https://www.zoom.com d/25-03-2022 1400 dur/1.5 m/1 r/Y t/recorded t/lecturequiz`.</p>
+            <li>Incorrect name</li>
+            <p>Command: `add n/Lectur$ u/https://www.zoom.com d/25-03-2022 1400 dur/1.5 m/1 r/Y t/recorded t/lecturequiz`.</p>
+            <li>Incorrect url</li>
+            <p>Command: `add n/Lecture u/zoom d/25-03-2022 1400 dur/1.5 m/1 r/Y t/recorded t/lecturequiz`.</p>
+            <li>Incorrect date</li>
+            <p>Command: `add n/Lecture u/https://www.zoom.com d/40-03-2022 1400 dur/1.5 m/1 r/Y t/recorded t/lecturequiz`.</p>
+            <li>Incorrect time</li>
+            <p>Command: `add n/Lecture u/https://www.zoom.com d/25-03-2022 2500 dur/1.5 m/1 r/Y t/recorded t/lecturequiz`.</p>
+            <li>Incorrect duration</li>
+            <p>Command: `add n/Lecture u/https://www.zoom.com d/25-03-2022 1400 dur/25 m/1 r/Y t/recorded t/lecturequiz`.</p>
+            <li>Incorrect module index</li>
+            <p>Command: `add n/Lecture u/https://www.zoom.com d/25-03-2022 1400 dur/1.5 m/10 r/Y t/recorded t/lecturequiz`.</p>
+            <li>Incorrect recurrence</li>
+            <p>Command: `add n/Lecture u/https://www.zoom.com d/25-03-2022 1400 dur/1.5 m/1 r/A t/recorded t/lecturequiz`.</p>
+            <li>Incorrect tag</li>
+            <p>Command: `add n/Lecture u/https://www.zoom.com d/25-03-2022 1400 dur/1.5 m/1 r/Y t/recorded t/!ecturequiz`.<br/></p>
+        </ol>
+    <p>For each of the incorrect commands, there will be an error message included on how to rectify the issue.</p>
+</ol>
+
+   
 
 #### Edit Meetings
-1. Test case: `edit 1 n/Lecture` <br/>
-   Prerequisites:
-      1. There is at least one meeting in the meeting list.<br/>
-   Expected: The meeting at the first index is edited.
-2. Incorrect commands: <br/>
-   For each field of the meeting, you can refer to the Add Meetings of the Instructions for manual testing as they are exactly the same.
-   1. Duplicate meeting <br/>
-      Prerequisite:
-         1. There is a meeting in the meeting list at index 4 which was added using the command `add n/Lecture u/https://www.zoom.com d/25-03-2022 1400 dur/1.5 m/1 r/Y t/recorded t/lecturequiz`.
-         2. There is a meeting in the meeting list at index 1 which was added using the command `add n/Tutorial u/https://www.zoom.com d/25-03-2022 1400 dur/1.5 m/1 r/Y t/recorded t/lecturequiz`<br/>
-      Command: `edit 1 n/Lecture` <br/>
-      Expected: There will be an error message included on how to rectify the issue.
+<ol>
+    <li>Test case: `edit 1 n/Lecture` </li>
+    <p>Prerequisites:</p>
+        <ol>
+            <li>There is at least one meeting in the meeting list.</li>
+        </ol>
+    <p>Expected: The meeting at the first index is edited.</p>
+    <li>Incorrect commands:</li>
+    <p>For each field of the meeting, you can refer to the Add Meetings of the Instructions for manual testing as they are exactly the same.</p>
+        <ol>
+            <li>Duplicate meeting</li>
+            <p>Prerequisite:</p>
+                <ol>
+                    <li>There is a meeting in the meeting list at index 4 which was added using the command `add n/Lecture u/https://www.zoom.com d/25-03-2022 1400 dur/1.5 m/1 r/Y t/recorded t/lecturequiz`.</li>
+                    <li>There is a meeting in the meeting list at index 1 which was added using the command `add n/Tutorial u/https://www.zoom.com d/25-03-2022 1400 dur/1.5 m/1 r/Y t/recorded t/lecturequiz`</li>
+                </ol>
+            <p>Command: `edit 1 n/Lecture`</p>
+            <p>Expected: There will be an error message included on how to rectify the issue.</p>
+        </ol>
+</ol>
          
 ### Deleting a person
 
