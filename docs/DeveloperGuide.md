@@ -713,14 +713,12 @@ testers are expected to do more *exploratory* testing.
 1. Test case: `add n/Lecture u/https://www.zoom.com d/25-03-2022 1400 dur/1.5 m/1 r/Y t/recorded t/lecturequiz` <br/>
    Prerequisites:
       1. There is no other meetings with the exact same fields.
-      2. There is one module in the module list.
-   <br/>
+      2. There is one module in the module list.<br/>
    Expected: Meeting is added.
 2. Incorrect commands:
    1. Duplicate meeting <br/>
       Prerequisite:
-         1. The testcase command was just entered.
-      <br/>
+         1. The testcase command was just entered.<br/>
       Command: `add n/Lecture u/https://www.zoom.com d/25-03-2022 1400 dur/1.5 m/1 r/Y t/recorded t/lecturequiz`.
    2. Incorrect name <br/>
       Command: `add n/Lectur$ u/https://www.zoom.com d/25-03-2022 1400 dur/1.5 m/1 r/Y t/recorded t/lecturequiz`.
@@ -737,23 +735,20 @@ testers are expected to do more *exploratory* testing.
    8. Incorrect recurrence <br/>
       Command: `add n/Lecture u/https://www.zoom.com d/25-03-2022 1400 dur/1.5 m/1 r/A t/recorded t/lecturequiz`.
    9. Incorrect tag <br/>
-      Command: `add n/Lecture u/https://www.zoom.com d/25-03-2022 1400 dur/1.5 m/1 r/Y t/recorded t/!ecturequiz`.
-   <br/>
+      Command: `add n/Lecture u/https://www.zoom.com d/25-03-2022 1400 dur/1.5 m/1 r/Y t/recorded t/!ecturequiz`.<br/>
    For each of the incorrect commands, there will be an error message included on how to rectify the issue.
 
 #### Edit Meetings
 1. Test case: `edit 1 n/Lecture` <br/>
    Prerequisites:
-      1. There is at least one meeting in the meeting list.
-   <br/>
+      1. There is at least one meeting in the meeting list.<br/>
    Expected: The meeting at the first index is edited.
 2. Incorrect commands: <br/>
    For each field of the meeting, you can refer to the Add Meetings of the Instructions for manual testing as they are exactly the same.
    1. Duplicate meeting <br/>
       Prerequisite:
          1. There is a meeting in the meeting list at index 4 which was added using the command `add n/Lecture u/https://www.zoom.com d/25-03-2022 1400 dur/1.5 m/1 r/Y t/recorded t/lecturequiz`.
-         2. There is a meeting in the meeting list at index 1 which was added using the command `add n/Tutorial u/https://www.zoom.com d/25-03-2022 1400 dur/1.5 m/1 r/Y t/recorded t/lecturequiz`
-      <br/>
+         2. There is a meeting in the meeting list at index 1 which was added using the command `add n/Tutorial u/https://www.zoom.com d/25-03-2022 1400 dur/1.5 m/1 r/Y t/recorded t/lecturequiz`<br/>
       Command: `edit 1 n/Lecture` <br/>
       Expected: There will be an error message included on how to rectify the issue.
          
